@@ -20,12 +20,16 @@ const MainCard = () => {
               </h2>
             </div>
             <div className="flex justify-center mt-8">
-              <button className="bg-primary py-2 px-4 rounded-md text-white mx-4 font-bold">
-                View My Work
-              </button>
-              <button className=" py-2 px-4 rounded-md text-primary border-primary border-2 font-bold">
-                Get In Touch
-              </button>
+              <a href="https://github.com/Jmelgar1014">
+                <button className="bg-primary py-2 px-4 rounded-md text-white mx-4 font-bold">
+                  View My Work
+                </button>
+              </a>
+              <a href="https://www.linkedin.com/in/jose-melgar2019/">
+                <button className=" py-2 px-4 rounded-md text-primary border-primary border-2 font-bold">
+                  Get In Touch
+                </button>
+              </a>
             </div>
           </div>
         </div>
