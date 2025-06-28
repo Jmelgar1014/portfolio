@@ -54,7 +54,7 @@ const ProjectContainer = () => {
             githubLink="https://github.com/Jmelgar1014/BillTracker"
             liveLink="https://invoicehistory.netlify.app"
             projectLogo={invoice}
-            projectName="Bill Tracker Webstite"
+            projectName="Bill Tracker Website"
             description="Web application that stores all invoice information user inserts and stores it by month with a graph for a each month to measure much was spent."
           >
             {" "}
