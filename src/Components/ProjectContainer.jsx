@@ -5,6 +5,39 @@ import SkillBadge from "./SkillBadge";
 import invoice from "../assets/invoice.png";
 
 const ProjectContainer = () => {
+  const projects = [
+    {
+      githubLink: "https://github.com/Jmelgar1014/JobTracker",
+      liveLink: "https://apptracking.netlify.app",
+      projectLogo: jobTracker,
+      projectName: "Job Tracker Website",
+      description: "Web App to keep track of all jobs applied to.",
+      skills: ["React", "Javascript", "Supabase", "CSS"],
+    },
+    {
+      githubLink: "https://github.com/Jmelgar1014/JobTrackerAPI",
+      liveLink: "",
+      projectLogo: jobTracker,
+      projectName: "JobTracker Web API",
+      description:
+        "REST Api developed with asp.net core using repository pattern, dependency injection, and entity frameowrk",
+      skills: [
+        "ASP.NET Core",
+        "Entity Framework",
+        "Dependency Injection",
+        "Supabase",
+      ],
+    },
+    {
+      githubLink: "https://github.com/Jmelgar1014/BillTracker",
+      liveLink: "https://invoicehistory.netlify.app",
+      projectLogo: invoice,
+      projectName: "Bill Tracker Website",
+      description:
+        "Web application that stores all invoice information user inserts and stores it by month with a graph for a each month to measure much was spent.",
+      skills: ["React", "Javascript", "Tailwind CSS", "Supabase"],
+    },
+  ];
   return (
     <>
       <div className="flex justify-center flex-col mx-4 ">
@@ -16,56 +49,19 @@ const ProjectContainer = () => {
           experience in full-stack development.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 gap-8 place-items-center lg:mx-8 lg:gap-4">
-          <Projects
-            githubLink="https://github.com/Jmelgar1014/JobTracker"
-            liveLink="https://apptracking.netlify.app"
-            projectLogo={jobTracker}
-            projectName="Job Tracker Website"
-            description="Web App to keep track of all jobs applied to."
-          >
-            {" "}
-            <SkillBadge className="bg-primary text-white" skill="React" />
-            <SkillBadge className="bg-primary text-white" skill="Javascript" />
-            <SkillBadge className="bg-primary text-white" skill="CSS" />
-            <SkillBadge className="bg-primary text-white" skill="Supabase" />
-          </Projects>
-          <Projects
-            githubLink="https://github.com/Jmelgar1014/JobTrackerAPI"
-            projectLogo={jobTracker}
-            projectName="JobTracker Web API"
-            description="REST Api developed with asp.net core using repository pattern, dependency injection, and entity frameowrk"
-          >
-            <SkillBadge className="bg-primary text-white" skill="C#" />
-            <SkillBadge
-              className="bg-primary text-white"
-              skill="ASP.NET Core"
-            />
-            <SkillBadge
-              className="bg-primary text-white"
-              skill="Entity Framework"
-            />
-            <SkillBadge
-              className="bg-primary text-white"
-              skill="Dependency Injection"
-            />
-            <SkillBadge className="bg-primary text-white" skill="Supabase" />
-          </Projects>
-          <Projects
-            githubLink="https://github.com/Jmelgar1014/BillTracker"
-            liveLink="https://invoicehistory.netlify.app"
-            projectLogo={invoice}
-            projectName="Bill Tracker Website"
-            description="Web application that stores all invoice information user inserts and stores it by month with a graph for a each month to measure much was spent."
-          >
-            {" "}
-            <SkillBadge className="bg-primary text-white" skill="React" />
-            <SkillBadge className="bg-primary text-white" skill="Javascript" />
-            <SkillBadge
-              className="bg-primary text-white"
-              skill="Tailwind CSS"
-            />
-            <SkillBadge className="bg-primary text-white" skill="Supabase" />
-          </Projects>
+          {projects.map((project) => (
+            <Projects
+              githubLink={project.githubLink}
+              liveLink={project.liveLink}
+              projectLogo={project.projectLogo}
+              projectName={project.projectName}
+              description={project.description}
+            >
+              {project.skills.map((skill) => (
+                <SkillBadge className="bg-primary text-white" skill={skill} />
+              ))}
+            </Projects>
+          ))}
         </div>
       </div>
     </>
