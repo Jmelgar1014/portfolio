@@ -3,9 +3,18 @@ import Projects from "./Projects";
 import jobTracker from "../assets/jobtracker.png";
 import SkillBadge from "./SkillBadge";
 import invoice from "../assets/invoice.png";
+import mannys from "../assets/mannys.png";
 
 const ProjectContainer = () => {
   const projects = [
+    {
+      githubLink: "",
+      liveLink: "https://mannyslawnandlandscape.com/",
+      projectLogo: mannys,
+      projectName: "Freelance Landscaping Website",
+      description: "Landscaping website for small business",
+      skills: ["React", "TypeScript", "NextJS", "Tailwind CSS"],
+    },
     {
       githubLink: "https://github.com/Jmelgar1014/JobTracker",
       liveLink: "https://apptracking.netlify.app",
